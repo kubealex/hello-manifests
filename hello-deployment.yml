@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-tekton
+spec:
+  selector:
+    matchLabels:
+      app: hello-tekton
+  template:
+    metadata:
+      labels:
+        app: hello-tekton
+    spec:
+      containers:
+      - name: hello-tekton
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
