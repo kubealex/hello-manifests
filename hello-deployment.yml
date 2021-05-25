@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: hello-tekton
-        image: <Image>
+        image: IMAGE
         resources:
           limits:
             memory: "128Mi"
